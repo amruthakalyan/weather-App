@@ -13,21 +13,24 @@
       background-color: #0e0e0e;
       z-index: 0;
       color: #f4f1f1;
+      /* background-image: url(images/weatherbgImg.jpg); */
     }
     .container {
       width: 290px;
       height: 530px;
       margin:auto;
-      background-color: #0c0c0c;
+      /* background-color: #0c0c0c; */
       border-radius: 25px;
       box-shadow:-1px  10px 19px 20px  rgb(126, 127, 128);
       padding: 15px 8px;
       z-index: 1;
+      background-image: url(images/weatherbgImg.jpg);
     }
     .first{
         display:flex;
         justify-content: center;
         align-items: center;
+        background-color: transparent;
     }
     .first .text{
         padding: 12px;
@@ -42,11 +45,13 @@
     .first #searchBtn{
         width: 35px;
         height: 30px;
+        background-color: transparent;
     }
    .weather {
       display: block;
       justify-content: center;
       align-items: center;
+      background-color: transparent;
    }
   .weather .cloud,.clear,.rain,.drizzle{
     position: relative;
@@ -54,10 +59,12 @@
     left: 20px;
     display: none;
     width: 150px;
+    background-color: transparent;
   }
   
    .weather .temp,.city,#description{
      margin-left: 70px;
+     background-color: transparent;
    }
    #description{
     font-weight: 500;
@@ -70,28 +77,27 @@
     background-color: transparent;
 
    }
-   .second div{
+   .second .img{
     background-color: transparent;
    }
-   #humidity,#windhumidity{
-    width:20px;
+   #humidy,#windhumidity{
+    width:50px;
     background-color:transparent;
     /* position:relative;
     top: auto; */
    }
     .p1 {
         position: relative;
-        /* top: 70px; */
-        /* left: -70px; */
+        background-color:transparent;
     }
     .p2 {
         position: relative;
-        /* top: 50px; */
-        /* left: -35px; */
+        background-color:transparent;
     }
   </style>
 
   <body>
+    
     <div class="container">
       <div class="first">
         <input type="text" class="text" id="input-text" />
@@ -107,11 +113,11 @@
           <p id="description"></p>
         </div>
      <div class="second">
-        <div>
+        <div class="img">
            <img src="images/humidity.png" alt=""  id="humidy"/>
           <p class="p1">Humidity:</p></div>
           <h1 id="humidity"></h1>
-         <div>
+         <div class="img">
           <img src="images/wind.png" alt=""  id="windhumidity" />
           <p class="p2">Windspeed:</p>
           <h2 id="windSpeed"></h2>

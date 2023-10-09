@@ -12,6 +12,7 @@ const rain = document.querySelector('.rain');
 const clear = document.querySelector('.clear');
 const drizzle = document.querySelector('.drizzle');
 
+
 async function checkWeather(city){
     const api_key = 'f84c43f29800b324c5427bb77c37f7ec';
     const  url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`;
@@ -25,9 +26,11 @@ async function checkWeather(city){
     humidity.innerHTML = `${weather_data.main.humidity +'%'}`;
     windSpeed.innerHTML = `${weather_data.wind.speed +'kmph'}`;
     humidity.style.fontSize='20px';
-    humidity.style.marginLeft='0px'
+    humidity.style.marginLeft='0px';
+    humidity.style.backgroundColor ='transparent';
     windSpeed.style.fontSize='20px';
-    windSpeed.style.marginLeft='0px'
+    windSpeed.style.marginLeft='0px';
+    windSpeed.style.backgroundColor ='transparent';
 
 
 
@@ -48,6 +51,8 @@ async function checkWeather(city){
 searchBtn.addEventListener('click',()=>{
     checkWeather(inputBox.value);
 });
+
+
 
 
  
