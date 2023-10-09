@@ -26,7 +26,8 @@ async function checkWeather(city){
     humidity.innerHTML = `${weather_data.main.humidity +'%'}`;
     windSpeed.innerHTML = `${weather_data.wind.speed +'kmph'}`;
     humidity.style.fontSize='20px';
-    humidity.style.marginLeft='0px';
+    humidity.style.marginLeft='-10px';
+    humidity.style.marginTop='70px';
     humidity.style.backgroundColor ='transparent';
     windSpeed.style.fontSize='20px';
     windSpeed.style.marginLeft='0px';
